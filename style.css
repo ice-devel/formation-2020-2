@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, "Times New Roman", serif;
+}
+p {
+    /* couleur du texte */
+    color: #008000;
+    /* normal ou italique */
+    font-style: italic;
+}
+
+.underline {
+    /* souligner le texte */
+    text-decoration: underline;
+}
+
+#div_bordered {
+    /* mettre une bordure (taille, style, couleur) */
+    border: 1px solid #000000;
+}
+
+.bold {
+    /* mettre en gras */
+    font-weight: bold;
+}
+
+.class1 {
+    color: blue;
+    border: 2px solid;
+}
+
+.class2 {
+    color: red;
+}
+
+div p, span {
+    font-size: 18px;
+}
+
+#p1 {
+    text-shadow: none;
+    margin-top: 30px !important;
+}
+
+@media screen and (min-width: 640px) {
+    nav {
+        display:none;
+    }
+}

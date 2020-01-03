@@ -90,11 +90,54 @@ Exercice 2 :
 
 II - CSS
 Mise en forme, le style (couleur, bordure)
+    1- Créer un fichier .css et de l'inclure dans les pages HTML
+    2- On cible les éléments que l'on veut mettre en forme, et on écrit le style à appliquer
+       On peut cibler avec 3 sélecteurs différents :
+        - par tag : on met le nom de la balise
+        - par identifiant (le #) : un identifiant est unique : un seul élément
+        - par classe (le .) : les classes peuvent être multiples (on les sépare par des espaces)
+         et sur plusieurs éléments
+
+    3- Des priorités s'appliquent sur plusieurs sélecteurs correspond à un même élément
+Sélecteur ID > Sélecteur Classe > Sélecteur par tag
+Si la priorité des sélecteurs est la même, c'est le dernier sélecteur qui prend le dessus.
+
+    4- On peut mixer grâce à un espace des sélecteurs pour appliquer du style sur des enfants :
+    div p : style sur les paragraphes qui se trouvent dans un div (peu importe le niveau de "parent" du div
+
+    5- On peut appliquer le même pour plusieurs sélecteurs : il suffit de les séparer par des virgues. Ex:
+    div p, span : les p dans des div, et les spans
+
+!important > inline > Sélecteur ID > Sélecteur Classe > Sélecteur par tag
+
+    6- Responsive : avec le même HTML, on va adapter la mise en page en CSS grâce à des médias queries
+
+    7- Framework css/js (des classes css et des fonctions js déjà existantes prêtes à être utilisées dans notre site):
+        - Bootstrap
+        - Materializecss
+
+        Ces frameworks vont être dans otre fichier en premier, c'est-à-dire avant notre perso, histoire
+        que notre code puisse si besoin surcharger le code du framework.
+
+Exercice :
+    Mettre en forme le formulaire et le tableau
+    Inclure bootstrap
+    - Formulaire :
+        - utilisez le style bootstrap sur les champs du formulaire
+        - mettez le formulaire dans un div : ce div doit faire 300px de largeur, et être centré dans la page
+        - le div doit avoir une couleur de fond gris clair
+    - Liste :
+        - Mettre une bordure sur le tableau (et chacune de ses cellules - faire pour que les bordures
+          ne soient doublés)
+        - Centrer le texte dans chacune des cellules
+        - Utiliser le style de bootstrap pour le tableau afin que les lignes change de couleur de fond
+          une ligne sur deux
+    Utilisez les sélecteurs que vous souhaitez pour cibler les éléments HTML
 
 III - Système de versionning GIT :
 
 Récupérer un projet versionné avec git
-La première fois quand le projet n'existe pas usr votre machine :
+La première fois quand le projet n'existe pas sur votre machine :
 git clone https://github.com/ice-devel/formation-2020-2.git
 
 Et les fois d'après pour récupérer les dernières versions
