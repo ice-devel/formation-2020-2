@@ -1,0 +1,92 @@
+I- HTML
+Description des éléments à afficher (paragraphe, image)
+Base d'un document HTML :
+Un Doctype : version de html utilisée
+    Balise HTML : contient l'ensemble du document
+    Balise Head : Les entêtes (configuration)
+    Balise Body : les éléments à afficher dans la page
+
+Le html est basé comme le xml sur des balises/tags (ouvrantes/fermantes ou orphelines),
+qui peuvent avoir des attributs obligatoires/facultatifs
+Le respect de l'indentation est primordial pour la relecture du code :)
+
+Sites :
+    - w3schools
+    - caniuse
+    - stackoverflow
+    - php.net
+    - symfony.com
+    - openclassroom
+
+- div : bloc
+- p : paragraphe
+- a : lien
+- ul : liste à puce / numérotée
+- img : image
+- br : retour à la ligne
+- noeud textuel : du texte sans balise
+- h1 à h6 : les titres par ordre d'importance
+- table : les tableaux composés de lignes (tr), elles-mêmes composées
+de cellules (td)
+- span : mise en forme de texte
+
+- form : permettre à l'utilisateur de saisir des informations
+Label / placeholder :
+    - On peut lier un champ à un label pour faciliter le clic sur le champ :
+      en cliquant sur le label, ça sera comme si on avait cliqué sur le champ
+
+    - Ou on peut utiliser les placeholder : indication dans le champ qui disparait
+    dès que l'on cmmence à saisir
+Type de champs
+    - input text : texte
+    - password
+    - number
+    - textarea : grande zone de texte
+    - file : upload d'un fichier
+    - chebkox et radio : bouton radio et case à cocher
+
+Certains types de champs auront pour effet de bloquer la validation du formulaire
+si la valeur saisie n'est pas bonne : par ex. email attend un @
+
+Il y a d'autres attributs qui permettent de faire une première validation du formulaire en HTML5 :
+ - required : obligatoire
+ - pattern : forcer un format particulier de chaine de caractères : expression régulière
+Et puis certains attrbiuts spécifiques à certains champs :
+    - min et max pour number
+    - minlength et maxlength pour text, email, etc.
+    - accept pour file (forcer le type mime)
+
+Méthode GET / POST
+    - la méthode GET fait apparaitre les informations dans l'URL
+        pratique pour partager des urls contenant des informations
+        (comme numéro de page / filtres)
+    - POST cache les informations, permet d'envoyer plus d'informations
+    - Aucune des deux n'est plus sécurisé que l'autre
+
+
+Exercice :
+    Créer trois fichiers html, qui comporte chacun trois liens:
+    Ces trois liens doivent pointer vers chacune de ces 3 pages
+
+Exercice 2 :
+    - index :
+    - form :
+        Coder en HTML un formulaire de candidature avec les champs suivants :
+        - civilite
+        - nom
+        - prenom
+        - email
+        - un téléphone
+        - un CV (fichier)
+        - un bouton valider
+        Vous pouvez utiliser les labels/placeholders.
+        Il faut un attribut name pour chaque champ.
+
+    - list
+        - Faire un tableau (avec entêtes) HTML avec autant de colonnes qu'il y a
+        de champs de formulaire avec 4 candidatures fictives.
+        Pour la colonne CV, vous pouvez juste faire un lien "Voir le CV"
+
+
+II - CSS
+Mise en forme, le style (couleur, bordure)

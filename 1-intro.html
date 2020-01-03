@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intro</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    Texte à afficher
+    Balise HTML :
+    Paragraphe : Balise p
+    Bloc : balise div
+
+    <p>Ceci est le texte de mon paragraphe</p>
+
+    <div>
+        Texte de mon div
+    </div>
+
+    <div>
+        DEuxième div
+        <p>
+            Autre paragraphe
+        </p>
+    </div>
+
+    <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+        <li>Element 6</li>
+    </ul>
+
+    <ol>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+        <li>Element 6</li>
+    </ol>
+
+    <img src="https://www.google.fr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+         alt="logo google" title="logo"/>
+
+    <br>
+
+    <a href="cours.txt">Clique ici</a>
+
+    <span>Texte dans un span</span>
+
+    <h2>Formulaire</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Toto</td>
+                <td>Dpond</td>
+                <td>dpond@gmail.com</td>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr>
+                <td>Test</td>
+                <td>Gérard</td>
+                <td>gege@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>Formulaire</h2>
+
+    <form action="1-intro.html" method="post">
+        <label for="input_name">Nom :</label>
+        <input type="text" id="input_name" name="name"/>
+
+        <br>
+
+        <input type="password" placeholder="Votre mot de passe" name="pass"/>
+
+        <br>
+
+        <input type="number" placeholder="Votre âge" name="age"/>
+
+        <br>
+
+        <label for="reglement">J'accepte le réglement</label>
+        <input type="checkbox" id="reglement"/>
+
+        <br>
+
+        <label for="civiliteM">M.</label>
+        <input type="radio" id="civiliteM" name="civ"/>
+
+        <label for="civiliteMme">Mme</label>
+        <input type="radio" id="civiliteMme" name="civ"/>
+
+        <br>
+
+        <label>Votre pays :</label>
+        <select>
+            <option></option>
+            <option>France</option>
+            <option>Belgique</option>
+            <option>Allemagne</option>
+        </select>
+
+        <br>
+
+        <label>Présentez-vous :</label>
+        <textarea placeholder="Au moins 50 caractères svp"></textarea>
+
+        <br>
+
+        <label>Votre CV (en pdf)</label>
+        <input type="file" />
+
+        <br>
+
+        <input type="submit" />
+    </form>
+</body>
+</html>
