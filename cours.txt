@@ -90,3 +90,12 @@ Exercice 2 :
 
 II - CSS
 Mise en forme, le style (couleur, bordure)
+
+III - Système de versionning GIT :
+
+Récupérer un projet versionné avec git
+La première fois quand le projet n'existe pas usr votre machine :
+git clone https://github.com/ice-devel/formation-2020-2.git
+
+Et les fois d'après pour récupérer les dernières versions
+git pull
