@@ -1,0 +1,80 @@
+1- Intro
+
+a- Echange client/serveur :
+ - La base de données est côté serveur : on y accéde grâce à un langage serveur comme PHP, Java
+ - MySQL est l'un des SGBDR (système de gestion de base de données relationnelles) les plus connus
+ - Concurrence : Postgresql, Microsoft, SQL server, Oracle
+ - Une base de données assure la persistence (sauvegarde sur la durée des données)
+
+b- Structure d'une base de données :
+    - Table
+        - Champ 1 (VARCHAR, INT, DATETIME, BOOLEAN)
+        - Champ 2
+    - Table 2 :
+        - Champ 1
+        - Champ 2
+
+On crée une table par type de données métier. Exemple dans un site e-commerce :
+    - Produit
+    - Commande
+    - Utilisateur
+
+Dans chaque table, on met une clé primaire : dans cette colonne, les données ne peuvent pas
+être présentes plus d'une fois. C'est une contrainte.
+
+En général, la clé primaire est un champ AUTO-INCREMENT : la bdd gère elle-même la donnée
+lors de l'insertion d'un enregistrement.
+
+2- Utilisation
+On utile le langage SQL pour communiquer avec une base de données SQL.
+    - Le SQL pour la structure
+    - Le SQL pour les données
+Pour gérer les données dans une base : le CRUD (create-read-update-delete)
+
+    a- SELECT : la sélection des données
+
+        - Tout sélectionner dans une table :
+          SELECT * FROM user
+        - Tout sélectionner mais obtenir uniquement certains colonnes
+          SELECT name, email FROM user
+
+        - Restreindre les résultats en fonction de conditions : WHERE
+        - Tous les utilisateurs qui s'appelent toto :
+          SELECT * FROM user WHERE name = 'toto'
+
+
+        - Qui s'appelle toto et qui ont un email enregistré
+          SELECT * FROM user WHERE name = 'toto' AND email IS NOT null
+
+        - Avec des priorités entre parenthèse
+          SELECT * FROM user
+          WHERE name='test'
+          AND email IS NOT null
+          OR id > 3
+
+          SELECT * FROM user
+            WHERE name='test'
+            AND (email IS NOT null
+            OR id > 3)
+    b- les opérateurs de comparaison
+        = : égal à
+        >, <, != : supérieur à, inférieur à, différent de
+
+        LIKE : une chaine respectant un format avec la possibilité % ou _
+            % : 0, 1 ou plusieurs caractères
+            _ : 1 caractère obligatoire
+        Exemple : les utilisateurs inscrits en 2019
+            SELECT * FROM user WHERE created_at LIKE '2019%'
+
+        BETWEEN : WHERE id BETWEEN 1 AND 3
+                    WHERE id >= 1 AND id <= 3
+        IN : WHERE name IN ('toto', 'gérard', 'jean')
+        NOT IN : WHERE name NOT IN ('toto', 'gérard', 'jean')
+
+    c- Exercices : écrire les requêtes SQL correspondantes :
+        - Sélectionner tous les utilisateurs inscrits en 2006
+        - Sélectionner tous les utilisateurs inscrits en 2016 et 2018
+        - Sélectionner le nom des utilisateurs dont le nom commence par 'th'
+            ou l'adresse email est sur gmail
+        - Sélectionner les utilisateurs dont le nom est "fab" ou "jean"
+            et dont l'adresse email est remplie
