@@ -73,8 +73,59 @@ Pour gérer les données dans une base : le CRUD (create-read-update-delete)
 
     c- Exercices : écrire les requêtes SQL correspondantes :
         - Sélectionner tous les utilisateurs inscrits en 2006
-        - Sélectionner tous les utilisateurs inscrits en 2016 et 2018
+        - Sélectionner tous les utilisateurs inscrits entre 2016 et 2018
         - Sélectionner le nom des utilisateurs dont le nom commence par 'th'
             ou l'adresse email est sur gmail
         - Sélectionner les utilisateurs dont le nom est "fab" ou "jean"
             et dont l'adresse email est remplie
+
+        - SELECT * FROM user WHERE created_at LIKE '2006%'
+          SELECT * FROM user WHERE YEAR(created_at) = 2006
+
+        - SELECT * FROM user WHERE created_at
+        BETWEEN '2016-01-01 00:00:00' AND '2018-12-31 23:59:59'
+        - SELECT * FROM user WHERE YEAR(created_at) BETWEEN 2016 AND 2018
+
+        - SELECT name FROM user WHERE name LIKE 'th%' OR email LIKE '%@gmail.com'
+
+        - SELECT * FROM user WHERE (name = 'fab' OR name ='jean') AND email IS NOT NULL
+        - SELECT * FROM user WHERE name IN ('fab', 'jean') AND email IS NOT NULL
+
+    d- Clauses avancées
+        - ORDER BY : trier le jeu de résultat en fonction d'une ou plusieurs colonnes
+        SELECT * FROM user ORDER BY name ASC, created_at ASC
+
+        - GROUP BY : grouper les enregistrements en fonction d'une ou plusieurs colonnes
+
+        afficher le nombre de joueur par équipe
+        SELECT COUNT(*), team FROM `user` GROUP BY team
+
+        afficher le nombre de joueur par équipe et par code postal
+        SELECT COUNT(*), team, zipcode FROM `user` GROUP BY team, zipcode
+
+        - HAVING : complément/condition d'un GROUP BY
+
+        Sélectionner le nombre de joueurs par équipe et ne sortir que les équipes
+        qui ont au moins 2 joueurs :
+        SELECT COUNT(*), team FROM `user` GROUP BY team HAVING COUNT(*) >= 2
+
+        SELECT COUNT(*) AS nb_players, team FROM `user`
+        GROUP BY team HAVING nb_players >= 2
+
+
+    e- Insertion en bdd
+    INSERT INTO user (id, name, email, team, is_enabled, zipcode)
+    VALUES (NULL, 'toto', 'toto55@mail.fr', 3, 1, '59300');
+
+    f- Suppression
+    DELETE FROM user // supprime tous les utilisateurs
+    DELETE FROM user WHERE id = 2 // supprime l'enregistrement dont l'id est égal à 2
+
+    g- mise à jour
+    UPDATE user SET name = 'Fabrice' WHERE id = 3
+    UPDATE user SET name = 'Fabrice', is_enabled=1 WHERE id = 3
+
+    git reset --hard origin/master
+    git pull
+
+
