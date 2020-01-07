@@ -142,3 +142,7 @@ git clone https://github.com/ice-devel/formation-2020-2.git
 
 Et les fois d'après pour récupérer les dernières versions
 git pull
+
+Si vous avez fait des modifications sur votre local, vous devrez les "commiter" avant de pouvoir faire un pull.
+Sinon vous pouvez écrasez vos modifications en faisant cette commande avant le pull :
+git reset --hard origin/master

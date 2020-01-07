@@ -1,0 +1,216 @@
+Algorithmie:
+
+Un algorithme est une suite d'instructions destinées à résoudre un problème.
+
+Par exemple : aller au toilette;
+Problème : j'ai envie de pisser
+
+Début algo
+    Se lever
+    Aller au toilette
+    Se déshabiller
+    PISSER
+    Tirer la chasse
+    Se rhabiller
+    Se laver les mains
+Fin Algo
+
+Variables
+    ingredient1
+    ingredient2
+    ingredient3
+Début algo
+    sortir ingredient1
+    sortir ingredient2
+    melanger ingredient1 avec ingredient2 donne ingredient3
+    mettre ingredient 3 au four
+    sort la preparation
+Fin Algo
+
+Dans un langage un plus informatique:
+
+Variables
+    chiffre1: entier
+    chiffre2: entier
+    resultat: entier
+Debut Algo
+    chiffre1 = Saisir "Le premier chiffre ?"
+    chiffre2 = Saisir "Le second chiffre ?"
+    resultat = chiffre1 * chiffre2
+    Afficher resultat
+Fin algo
+
+I- Types primitifs
+Les variables dans un programme sont typées :
+    - chaine de caractères
+    - entier
+    - décimal
+    - booléan
+Dans les langages comme PHP (faiblement typé), ça ne sera pas obligatoire.
+Dans d'autres langages comme Java, c'est obligatoire.
+
+II - Structures conditionnelles :
+    -a : le SI
+Tester une condition, puis exécuter des instructions seulement si la condition
+est vraie, et possibilité d'exécuter d'autres instructions si elle est fausse.
+
+Variable
+    age: entier
+Debut Algo
+    age = Saisir "Quel est votre âge ?"
+
+    SI age > 17
+        afficher "Vous êtes majeur"
+    SINON
+        afficher "Vous êtes mineur"
+    FIN SI
+
+    afficher "Fin du programme"
+Fin algo
+
+Cf 1-isMajeur.alg
+
+On peut cumuler les conditions grâce aux opérateurs logiques : ET et OU
+On peut prioriser les OU grâce aux parenthèses.
+
+Debut Algo
+    SI 5 == 5 ET 6 < 10
+        afficher "5 est bien égal à 5 et 6 inférieur à 10"
+    FIN SI
+
+    SI 5 == 5 OU 6 > 10
+        afficher "5 est égal à 5 ou 6 est supérieur à 10"
+    FIN SI
+
+    SI 5 == 5 ET 3 > 5 OU 9 == 9
+        // on rentre
+    FIN SI
+
+    SI 5 == 5 ET (3 > 5 OU 9 == 8)
+        // on rentre
+    FIN SI
+Fin algo
+
+    -b : le SELON
+
+Variable
+    note: entier
+Algo
+    age = saisir "Quelle note as-tu eue ?"
+    SELON note
+        CAS 5:
+            afficher "c'est pas très bien"
+        CAS 10:
+        CAS 11:
+        CAS 12:
+            afficher "moyen"
+        CAS 20:
+            afficher "pas mal"
+        DEFAUT:
+            afficher "ras"
+    FIN SELON
+Fin Algo
+
+ c- SI / SINON SI / SINON
+Variable
+    note: entier
+Algo
+    age = saisir "Quelle note as-tu eue ?"
+
+    SI note == 5
+        afficher "c'est pas très bien"
+    SINON SI note == 10 OU note == 11 OU note == 12
+        afficher "c'est pas très bien"
+    SINON SI note == 20
+        afficher "pas mal"
+    SINON
+        afficher "ras"
+    FIN SI
+Fin Algo
+
+Exercice :
+Demander à l'utilisateur un chiffre (min 1 - max 9), sinon message erreur
+Puis afficher la table de multiplication de ce chiffre sous ce format :
+1 * 2 = 2
+2 * 2 = 4
+...
+9 * 2 = 18
+
+Variable
+    chiffre: entier
+Debut algo
+    Lire chiffre
+
+    SI chiffre >= 1 ET chiffre <= 9
+        resultat = 1 * chiffre
+        afficher "1 * " chiffre "=" resultat
+        afficher "2 * " chiffre "=" (2 * chiffre)
+        afficher "3 * " chiffre "=" (3 * chiffre)
+        afficher "4 * " chiffre "=" (4 * chiffre)
+        afficher "5 * " chiffre "=" (5 * chiffre)
+        afficher "6 * " chiffre "=" (6 * chiffre)
+        afficher "7 * " chiffre "=" (7 * chiffre)
+        afficher "8 * " chiffre "=" (8 * chiffre)
+        afficher "9 * " chiffre "=" (9 * chiffre)
+    SINON
+        AFFICHER "erreur"
+    FIN SI
+Fin algo
+
+III - Structures itératives
+POUR / TANT QUE / REPETER JUSQU'A
+
+Algo
+    POUR i DE 0 à 8999 PAR PAS DE 1
+        afficher "Je dois pas tricher"
+    FIN POUR
+Fin algo
+
+Algo
+    i = 0
+    TANT QUE i < 10
+        afficher "Je dois pas tricher"
+        i = i + 1
+    FIN TANT QUE
+
+    Lire chiffre
+    TANT QUE chiffre < 1 OU chiffre > 10
+        afficher "erreur"
+        Lire chiffre
+    FINT TANT QUE
+
+    REPETER
+        Lire chiffre
+    TANT QUE chiffre < 1 OU chiffre > 10
+Fin algo
+
+Boucle POUR :
+    A utiliser quand on connait précisément le nombre d'itération à faire
+Boucle TANT QUE :
+    A utiliser quand on ne sait pas à l'avance le nb d'itération et qu'il est possible
+    qu'il n'y en ait pas
+Boucle REPETER :
+    A utiliser quand on ne sait pas à l'avance le nb d'itération mais qu'il y en
+    au moins une
+
+Autre exemple TANT QUE:
+Algo
+    somme = 0
+    chiffre = RANDOM(1, 10)
+    somme = somme + chiffre
+
+    TANT QUE somme < 100
+        chiffre = RANDOM(1, 10)
+        somme = somme + chiffre
+    FIN TANT QUE
+Fin algo
+
+Exercices :
+1-
+Demander à l'utilisateur de saisir 5 notes (entre 0 et 20)
+Afficher la moyenne de ces notes
+
+2-
+Demander à l'utilisateur de saisir des notes (entre 0 et 20)
+c'est lui qui décide quand la saisie s'arrete en tapant -1
+Afficher la moyenne de ces notes

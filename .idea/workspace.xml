@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adc1d670-2a91-46d9-ab95-0eccf4b5dcaf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/3-algo/cours.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1-html/cours.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1-html/cours.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2-mysql/cours.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2-mysql/cours.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,47 +51,57 @@
     <session id="-2139856456">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="702" />
           <entry key="html" value="526" />
-          <entry key="txt" value="6758" />
+          <entry key="txt" value="11984" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="702" />
           <entry key="HTML" value="526" />
-          <entry key="PLAIN_TEXT" value="6758" />
+          <entry key="PLAIN_TEXT" value="11984" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="txt" value="3" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2-mysql/cours.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="125" column="4" lean-forward="true" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="63" />
+            <state relative-caret-position="396">
+              <caret line="165" selection-start-line="165" selection-end-line="165" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/3-algo/cours.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="212" column="2" selection-start-line="212" selection-start-column="2" selection-end-line="212" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -123,7 +136,9 @@
         <option value="$PROJECT_DIR$/exercice/list.html" />
         <option value="$PROJECT_DIR$/exercice/liste.css" />
         <option value="$PROJECT_DIR$/exercice/form.html" />
+        <option value="$PROJECT_DIR$/1-html/cours.txt" />
         <option value="$PROJECT_DIR$/2-mysql/cours.txt" />
+        <option value="$PROJECT_DIR$/3-algo/cours.txt" />
       </list>
     </option>
   </component>
@@ -139,9 +154,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="430" />
-    <option name="y" value="-29" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="471" />
+    <option name="y" value="-33" />
     <option name="width" value="1020" />
     <option name="height" value="715" />
   </component>
@@ -178,7 +193,13 @@
             <path>
               <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
-              <item name="2-mysql" type="462c0819:PsiDirectoryNode" />
+              <item name="3-algo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="3-algo" type="462c0819:PsiDirectoryNode" />
+              <item name="algobox" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,18 +246,19 @@
       <workItem from="1577961099119" duration="14806000" />
       <workItem from="1578040407278" duration="7527000" />
       <workItem from="1578049280124" duration="1316000" />
-      <workItem from="1578299502573" duration="17949000" />
+      <workItem from="1578299502573" duration="18183000" />
+      <workItem from="1578385574669" duration="15100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51801000" />
+    <option name="totallyTimeSpent" value="67135000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15033557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -302,13 +324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1-html/cours.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="126" column="23" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1-html/exercice/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -316,10 +331,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1-html/cours.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="136" column="34" lean-forward="true" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/2-mysql/cours.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="125" column="4" lean-forward="true" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="63" />
+        <state relative-caret-position="396">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3-algo/cours.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="212" column="2" selection-start-line="212" selection-start-column="2" selection-end-line="212" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -125,7 +125,45 @@ Pour gérer les données dans une base : le CRUD (create-read-update-delete)
     UPDATE user SET name = 'Fabrice' WHERE id = 3
     UPDATE user SET name = 'Fabrice', is_enabled=1 WHERE id = 3
 
-    git reset --hard origin/master
-    git pull
+    h- Fonctions scalaires
+        Une fonction scalaire agit sur chaque entrée. On peut les utiliser dans un SELECT
+        comme dans un WHERE.
+
+        - UPPER() : mettre en majuscule une colonne
+        SELECT UPPER(name) FROM user
+        SELECT id, UPPER(name), zipcode FROM user
+        SELECT * FROM user WHERE name = UPPER('toto')
+
+        INSERT INTO user (name) VALUES(UPPER('toto'))
+
+        - LOWER() : mettre en minuscule
+
+        - LENGTH() : nombre de caractères dans la donnée
+        SELECT LENGTH(name) FROM user
+        SELECT * FROM user WHERE LENGTH(name) >= 5
+
+        - ROUND(moyenne) : arrondir à l'entier le plus proche
+        - ROUND(moyenne, 2) : arrondir à deux chiffres après la virgule
+        - CEILING(moyenne) : arrondir à l'entier supérieur
+        - FLOOR(moyenne) : arrondir à l'entier inférieur
+
+    i- Fonctions agrégats :
+        - COUNT() : nombre d'enregistrement dans une table
+        SELECT COUNT(*) FROM user
+
+        - MAX() : retourne le maximum
+        SELECT MAX(team) FROM user
+
+        - MIN() : retourne le minimum
+        - SUM() :
+        - AVG() :
+
+    Ces fonctions peuvent être utilisées en combinaison avec la clause GROUP BY
+    Obtenir la somme des points par équipe
+    SELECT SUM(points), team FROM user GROUP BY team
+
+    -j : Les jointures
 
 
+    -k : Pour aller plus loin
+    Les sous-requêtes, les vues, les procédures stockées, les triggers
