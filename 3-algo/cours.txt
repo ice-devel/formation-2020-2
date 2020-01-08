@@ -332,10 +332,8 @@ de la soustraction
 et afficher le résultat de la multiplication
 3- Demander à l'utilisateur deux nombres et afficher le résultat
 de la division.
-
 4- Demander à l'utilisateur son age, afficher s'il est majeur ou mineur.
-Et si il est mineur afficher combien d'année il reste avant qu'il soit majeur.
-
+Et si il est mineur afficher combien d'années il reste avant qu'il soit majeur.
 5- Demander à l'utilisateur un nom de fruit, lui afficher :
     - "Cool" dans le cas où il dit "fraise"
     - "Pas cool" dans le cas où il dit "banane"
@@ -343,9 +341,198 @@ Et si il est mineur afficher combien d'année il reste avant qu'il soit majeur.
     - "Comme tu veux" dans tous les autres cas
 
 6- Demander à l'utilisateur son année de naissance, puis son mois de naissance,
-puis son jour de naissance, pour enfin calculer et afficher précisément son âge.
+puis son jour de naissance, pour enfin calculer et afficher précisément son âge en années
 
 7- Demander à l'utilisateur de saisir des notes, le mot STOP pour arrêter.
 Stocker chacune de ces notes dans un tableau. Ensuite (une fois sorti de la boucle),
 afficher chacune des notes précédées de son numéro
 Puis une dernière ligne sous ce format : "Moyenne = 100 / 5 = 20"
+
+8- Demander à l'utilisateur de saisir un mot,
+puis afficher si ce mot est un palindrome ou non.
+
+Exo1-
+Variables
+    nombre1:entier
+    nombre2:entier
+Algo
+    Lire nombre1
+    Lire nombre2
+    afficher nombre1 - nombre2
+Fin algo
+
+
+Exo2-
+Variables
+    nombre1:entier
+    nombre2:entier
+Algo
+    Lire nombre1
+    Lire nombre2
+    SI nombre1 >= 5 et nombre1 <= 50 et nombre2 >= 5 et nombre2 <= 50
+        afficher nombre1 * nombre2
+    SINON
+        afficher "Nombre1 et nombre2 doivent être compris entre 5 et 50"
+    FIN SI
+Fin algo
+
+
+Exo3-
+Variables
+    nombre1:entier
+    nombre2:entier
+Algo
+    Lire nombre1
+    Lire nombre2
+
+    TANT QUE nombre2 == 0
+        afficher "Impossible de diviser par 0"
+        Lire nombre2
+    FIN TANT QUE
+
+    afficher nombre1 / nombre2
+Fin algo
+
+Exo4-
+Variables
+    age: entier
+Algo
+    Lire age
+
+    SI age < 18
+        afficher "Mineur"
+        afficher "Il reste " 18 - age " années avant d'être majeur"
+    SINON
+        afficher "Majeur"
+    FIN SI
+Fin algo
+
+Exo5-
+Variables
+    fruit: Chaine
+Algo
+    Lire fruit
+
+    // version SINON SI
+    SI fruit == "fraise"
+        afficher "cool"
+    SINON SI fruit == "banane"
+        afficher "pas cool"
+    SINON SI fruit == "kiwi"
+        afficher "etrange"
+    SINON
+        afficher "Comme tu veux"
+    FIN SI
+
+    // Version SELON
+    SELON fruit
+        CAS "fraise":
+            afficher "cool"
+        CAS "banane":
+           afficher "pas cool"
+        CAS "kiwi":
+           afficher "etrange"
+        DEFAUT
+           afficher "Comme tu veux"
+    FIN SELON
+Fin algo
+
+Exo6-
+Variables
+    anneeActuelle: entier
+    moisActuel: entier
+    jourActuel: entier
+    anneeNaissance: entier
+    moisNaissance: entier
+    jourNaissance: entier
+    age: entier
+Algo
+    anneeActuelle = 2020
+    moisActuel = 1
+    jourActuel = 8
+    Lire anneeNaissance
+    Lire moisNaissance
+    Lire jourNaissance
+
+    // version 1
+    SI moisActuel < moisNaissance
+        age = anneeActuelle - anneeNaissance - 1
+    FIN SI
+    SI moisActuel == moisNaissance
+        SI jourActuel < jourNaissance
+            age = anneeActuelle - anneeNaissance - 1
+        SINON
+            age = anneeActuelle - anneeNaissance
+        FIN SI
+    FIN SI
+    SI moisActuel > moisNaissance
+        age = anneeActuelle - anneeNaissance
+    FIN SI
+
+    // version 2
+    SI moisActuel < moisNaissance
+        age = anneeActuelle - anneeNaissance - 1
+    SINON SI moisActuel == moisNaissance
+        SI jourActuel < jourNaissance
+            age = anneeActuelle - anneeNaissance - 1
+        SINON
+            age = anneeActuelle - anneeNaissance
+        FIN SI
+    SINON SI moisActuel > moisNaissance
+        age = anneeActuelle - anneeNaissance
+    FIN SI
+
+    // version 3
+    age = anneActuelle - anneeNaissance
+
+    SI moisActuel < moisNaissance
+        age = age - 1
+    SINON SI moisActuel == moisNaissance ET jourActuel < jourNaissance
+        age = age - 1
+    FINSI
+
+     // version 3
+    age = anneeActuelle - anneeNaissance
+
+    SI moisActuel < moisNaissance OU (moisActuel == moisNaissance ET jourActuel < jourNaissance)
+        age = age - 1
+    FINSI
+Fin algo
+
+Exo7-
+Variables
+    note: entier
+    notes: tableau d'entier
+    somme: entier
+Algo
+    // v1 : do while
+    REPETER
+        Lire note
+        SI note != -1
+            ajouter note dans notes
+        FIN SI
+    TANT QUE note != -1
+
+    // v2 : while
+    Lire note
+    TANT QUE note != -1
+        ajouter note dans notes
+        Lire note
+    FIN TANT QUE
+
+    somme = 0
+    POUR i DE 0 à (notes.length - 1)
+        afficher (i + 1) " - " notes[i]
+        somme = somme + notes[i]
+    FIN POUR
+
+    afficher "Moyenne =" somme " / " notes.length " = " (somme / notes.length)
+
+Fin algo
+
+Exo 9:
+Demander à l'utilisateur de saisir un nombre de notes indéterminé (-1 pour stop)
+Afficher la note la plus basse
+
+Exo 10:
+Afficher la note la plus haute

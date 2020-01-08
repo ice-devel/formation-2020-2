@@ -59,14 +59,14 @@
         <counts>
           <entry key="css" value="702" />
           <entry key="html" value="526" />
-          <entry key="txt" value="14645" />
+          <entry key="txt" value="17024" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="702" />
           <entry key="HTML" value="526" />
-          <entry key="PLAIN_TEXT" value="14645" />
+          <entry key="PLAIN_TEXT" value="17024" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/3-algo/cours.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="350" column="65" lean-forward="true" selection-start-line="350" selection-start-column="65" selection-end-line="350" selection-end-column="65" />
+            <state relative-caret-position="614">
+              <caret line="537" column="30" selection-start-line="537" selection-start-column="30" selection-end-line="537" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -152,8 +152,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="471" />
-    <option name="y" value="-33" />
+    <option name="x" value="593" />
+    <option name="y" value="251" />
     <option name="width" value="1020" />
     <option name="height" value="715" />
   </component>
@@ -244,12 +244,12 @@
       <workItem from="1578040407278" duration="7527000" />
       <workItem from="1578049280124" duration="1316000" />
       <workItem from="1578299502573" duration="18183000" />
-      <workItem from="1578385574669" duration="22522000" />
+      <workItem from="1578385574669" duration="32107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74557000" />
+    <option name="totallyTimeSpent" value="84142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -344,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/3-algo/cours.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="350" column="65" lean-forward="true" selection-start-line="350" selection-start-column="65" selection-end-line="350" selection-end-column="65" />
+        <state relative-caret-position="614">
+          <caret line="537" column="30" selection-start-line="537" selection-start-column="30" selection-end-line="537" selection-end-column="30" />
         </state>
       </provider>
     </entry>
