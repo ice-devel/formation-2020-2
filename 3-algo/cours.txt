@@ -157,6 +157,8 @@ Debut algo
     FIN SI
 Fin algo
 
+Cf. 2-multiplication.alg
+
 III - Structures itératives
 POUR / TANT QUE / REPETER JUSQU'A
 
@@ -210,7 +212,140 @@ Exercices :
 Demander à l'utilisateur de saisir 5 notes (entre 0 et 20)
 Afficher la moyenne de ces notes
 
+Variables:
+    note1:entier
+    note2:entier
+    note3:entier
+    note4:entier
+    note5:entier
+    somme:entier
+    moyenne:entier
+Algo
+    Lire note1
+    Lire note2
+    Lire note3
+    Lire note4
+    Lire note5
+    somme = note1 + note2 + note3 + note4 + note5
+    moyenne = somme / 5
+    afficher moyenne
+
+    Lire note
+    somme = note
+
+    Lire note
+    somme = somme + note
+
+    Lire note
+    somme = somme + note
+
+    Lire note
+    somme = somme + note
+
+    Lire note
+    somme = somme + note
+
+    moyenne = somme / 5
+    afficher moyenne
+
+    // version POUR
+    somme = 0
+
+    POUR i DE 1 à 5
+        REPETER
+            Lire note
+        TANT QUE note < 0 OU note > 20
+
+        somme = somme + note
+    FIN POUR
+
+    moyenne = somme / 5
+    afficher moyenne
+Fin algo
+
 2-
 Demander à l'utilisateur de saisir des notes (entre 0 et 20)
 c'est lui qui décide quand la saisie s'arrete en tapant -1
 Afficher la moyenne de ces notes
+
+Algo
+    somme = 0
+    nbNotes = 0
+
+    Lire note
+    TANT QUE note != -1
+        SI note >= 0 ET note <= 20
+            somme = somme + note
+            nbNotes = nbNotes + 1
+        SINON
+            afficher "entre 0 et 20 stp"
+        FIN SI
+
+        Lire note
+    FIN TANT QUE
+
+    moyenne = somme / nbNotes
+    afficher moyenne
+Fin algo
+
+IV- Les tableaux / listes
+
+Variables:
+    note : entier
+    notes: tableau d'entier
+Algo
+    // ajouter des éléments dans un tableau les uns à la suite des autres
+    Lire note
+    ajouter note dans notes
+
+    Lire note
+    ajouter note dans notes
+
+    Lire note
+    ajouter note dans notes
+
+    Lire note
+    ajouter note dans notes
+
+    // accéder à un élément
+    afficher notes[0]
+    afficher notes[1]
+    afficher notes[2]
+    afficher notes[3]
+
+    // parcourir un tableau
+    POUR i de 0 à 3
+        afficher notes[i]
+    FIN POUR
+
+    // parcourir un tableau avec indice max dynamique
+    POUR i de 0 à LONGUEUR(notes)-1
+        afficher notes[i]
+    FIN POUR
+Fin algo
+
+Exercices:
+
+1- Demander à l'utilisateur deux nombres, et afficher le résultat
+de la soustraction
+2- Demander à l'utilisateur deux nombres compris entre 5 et 50,
+et afficher le résultat de la multiplication
+3- Demander à l'utilisateur deux nombres et afficher le résultat
+de la division.
+
+4- Demander à l'utilisateur son age, afficher s'il est majeur ou mineur.
+Et si il est mineur afficher combien d'année il reste avant qu'il soit majeur.
+
+5- Demander à l'utilisateur un nom de fruit, lui afficher :
+    - "Cool" dans le cas où il dit "fraise"
+    - "Pas cool" dans le cas où il dit "banane"
+    - "Etrange" dans le cas où il dit "kiwi"
+    - "Comme tu veux" dans tous les autres cas
+
+6- Demander à l'utilisateur son année de naissance, puis son mois de naissance,
+puis son jour de naissance, pour enfin calculer et afficher précisément son âge.
+
+7- Demander à l'utilisateur de saisir des notes, le mot STOP pour arrêter.
+Stocker chacune de ces notes dans un tableau. Ensuite (une fois sorti de la boucle),
+afficher chacune des notes précédées de son numéro
+Puis une dernière ligne sous ce format : "Moyenne = 100 / 5 = 20"
