@@ -536,3 +536,82 @@ Afficher la note la plus basse
 
 Exo 10:
 Afficher la note la plus haute
+
+V - Les fonctions
+
+Une fonction est une série d'instruction à laquelle on va donner un nom,
+pour pouvoir utiliser cette suite d'instructions à plusieurs reprises
+sans avoir les réécrire.
+
+Variables
+Fonction direCoucou()
+    afficher "Coucou"
+Fin fonction
+
+Algo
+    direCoucou()
+    direCoucou()
+    direCoucou()
+    direCoucou()
+Fin algo
+
+Une fonction peut prendre des paramètres d'entrée, et avoir une valeur
+de retour.
+
+Variables
+    somme: entier
+Fonction addition(nombre1:entier, nombre2:entier)
+    somme = nombre1 + nombre2
+    retourner somme
+Fin fonction
+
+Variables
+    nb1: entier
+    nb2: entier
+    resultat: entier
+    resultat2: entier
+    resultat3: entier
+Algo
+    resultat = addition(5, 10)
+
+    nb1 = 10
+    nb2 = 12
+    resultat2 = addition(nb1, nb2)
+
+    nb3 = 51
+    nb4 = 63
+    resultat3 = addition(nb3, nb4)
+Fin algo
+
+Fonction direCoucouA(prenom:chaine, upper:boolean=faux, finCoucou:chaine="!")
+    SI upper == true
+        afficher "coucou " UPPER(prenom) " " finCoucou
+    SINON
+        afficher "coucou " prenom " " finCoucou
+    FIN SI
+Fin fonction
+
+Algo
+    direCoucouA("Fab", faux)
+    direCoucouA("Gérard")
+    direCoucouA("Thomas", vrai, "")
+    direCoucouA("Thomas", vrai, ".")
+    direCoucouA("Jean", faux, ".")
+Fin algo
+
+On peut passer des paramètres facultatifs à une fonction :
+il suffit que ce paramètre ait une valeur dans la signature de la fonction.
+Attention : ces paramètres facultatifs sont forcément définis en
+dernières positions dans la signature de la fonction.
+
+Exercices :
+1- Créer une fonction qui multiplie deux nombres entre eux
+et retourne le résultat. Utilisez la fonction dans l'algo principal
+et affichez le résultat.
+
+2- Créer une fonction une fonction qui prend un âge en paramètre
+et retourne si oui ou non cet âge est celui d'une personne majeur ou
+pas.
+Utilisez cette fonction plusieurs fois dans l'algo principal
+en passant différentes valeurs, et afficher pour ces valeurs
+le texte "Vous êtes majeur" ou "Vous êtes mineur"
