@@ -671,10 +671,30 @@ Fin algo
 
 - Exercice Palindrome
 
+VARIABLES
+    i: entier
+    isPalindrome: booléen
+    indexMax: entier
+Fonction isPalindrome(word:chaine)
+    i = 0
+    isPalindrome = vrai
+    TANT QUE i <= indexMax ET isPalindrome == vrai
+        SI word[i] != word[indexMax-i]
+            isPalindrome = faux
+        FIN SI
+        i = i + 1
+    FIN TANT QUE
+
+    retourner isPalindrome
+Fin fonction
+
+
+
 Variables
     mot: chaine
     indexMax: entier
     i: entier
+    isPalin: booléen
 Algo
     Lire mot
     indexMax = ROUND(COUNT(mot)-1 / 2)
@@ -687,38 +707,22 @@ Algo
     FIN POUR
 
     Lire mot
-    i = 0
-    isPalindrome = vrai
-    TANT QUE i <= indexMax ET isPalindrome == vrai
-        SI mot[i] != mot[indexMax-i]
-            isPalindrome = faux
-        FIN SI
-        i = i + 1
-    FIN TANT QUE
+    isPalin = isPalindrome(mot)
 
-    SI isPalindrome == vrai
-        afficher "Palindrome"
+    SI isPalin == vrai
+        afficher mot " est un Palindrome"
     SINON
-        afficher "Papalindrome"
+        afficher mot " n'est pas un palindrome"
     FIN SI
 
     Lire mot
+    isPalin = isPalindrome(mot)
 
-    i = 0
-    isPalindrome = vrai
-    TANT QUE i <= indexMax ET isPalindrome == vrai
-        SI mot[i] != mot[indexMax-i]
-            isPalindrome = faux
-        FIN SI
-        i = i + 1
-    FIN TANT QUE
-
-    SI isPalindrome == vrai
+    SI isPalin == vrai
         afficher "Palindrome"
     SINON
         afficher "Papalindrome"
     FIN SI
-
 Fin algo
 
 bonjour
@@ -738,4 +742,24 @@ o == u
 2 == 1
 3 == 0
 
+Exercice :
+Modifier l'algo ci-dessus pour créer une fonction
+qui dit si un mot est un palindrome ou non
+et utiliser cette fonction dans l'algo principal
+
+Utilisez chacune de ces fonctions dans un algo principal
+Exos 1- Créer une fonction qui soustrait un nombre à un autre
+et qui retourne la difference
+
+Exos 2- Créer une fonction qui dit si oui ou non
+une chaine passée en paramètre possède bien 5 caractères
+
+Exos 3- Créer une fonction qui prend en paramètre un tableau
+et qui retourne un nouveau tableau dont les éléments
+sont inversés
+
+Exos 4- Créer une fonction qui prend en paramètre un tableau
+d'entier et retourne la valeur la plus petite
+
+Exos 5- Idem mais retourne la plus grande
 
