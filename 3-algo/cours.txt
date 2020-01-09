@@ -657,7 +657,7 @@ Algo
     SINON
         afficher "Vous êtes majeur"
     FIN SI
-    
+
     maj = estMajeur(15)
     SI maj == faux
         test = 50 * 15
@@ -668,3 +668,74 @@ Algo
         afficher une image
     FIN SI
 Fin algo
+
+- Exercice Palindrome
+
+Variables
+    mot: chaine
+    indexMax: entier
+    i: entier
+Algo
+    Lire mot
+    indexMax = ROUND(COUNT(mot)-1 / 2)
+
+    isPalindrome = vrai
+    POUR i de 0 à indexMax
+        SI mot[i] != mot[indexMax-i]
+            isPalindrome = faux
+        FIN SI
+    FIN POUR
+
+    Lire mot
+    i = 0
+    isPalindrome = vrai
+    TANT QUE i <= indexMax ET isPalindrome == vrai
+        SI mot[i] != mot[indexMax-i]
+            isPalindrome = faux
+        FIN SI
+        i = i + 1
+    FIN TANT QUE
+
+    SI isPalindrome == vrai
+        afficher "Palindrome"
+    SINON
+        afficher "Papalindrome"
+    FIN SI
+
+    Lire mot
+
+    i = 0
+    isPalindrome = vrai
+    TANT QUE i <= indexMax ET isPalindrome == vrai
+        SI mot[i] != mot[indexMax-i]
+            isPalindrome = faux
+        FIN SI
+        i = i + 1
+    FIN TANT QUE
+
+    SI isPalindrome == vrai
+        afficher "Palindrome"
+    SINON
+        afficher "Papalindrome"
+    FIN SI
+
+Fin algo
+
+bonjour
+b == r
+o == u
+
+0 == 6
+1 == 5
+2 == 4
+3 == 3
+4 == 2
+5 == 1
+6 == 0
+
+0 == 3
+1 == 2
+2 == 1
+3 == 0
+
+
