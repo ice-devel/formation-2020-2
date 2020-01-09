@@ -610,8 +610,61 @@ et retourne le résultat. Utilisez la fonction dans l'algo principal
 et affichez le résultat.
 
 2- Créer une fonction une fonction qui prend un âge en paramètre
-et retourne si oui ou non cet âge est celui d'une personne majeur ou
+et retourne si oui ou non cet âge est celui d'une personne majeure ou
 pas.
-Utilisez cette fonction plusieurs fois dans l'algo principal
-en passant différentes valeurs, et afficher pour ces valeurs
-le texte "Vous êtes majeur" ou "Vous êtes mineur"
+Utilisez cette fonction 3 fois dans l'algo principal
+en passant différentes valeurs (de votre choix), et afficher
+pour ces valeurs le texte "Vous êtes majeur" ou "Vous êtes mineur"
+
+Exo1-
+Variables
+    produit: entier
+Fonction multiplication(nombre1:entier, nb2:entier)
+    produit = nombre1 * nb2
+    retourner produit
+Fin fonction
+
+Variables
+    lePremierNombre: entier
+    leDeuxiemeNombre: entier
+    resultat: entier
+Algo
+    Lire lePremierNombre
+    Lire leDeuxiemeNombre
+    resultat = multiplication(lePremierNombre, leDeuxiemeNombre)
+    afficher resultat
+Fin algo
+
+Exo2-
+Variables
+    majeur: booléen
+Fonction estMajeur(age:entier): retourne un booléen
+    SI age >= 18
+       majeur = vrai
+    SINON
+       majeur = faux
+    FIN SI
+
+    retourner majeur
+Fin fonction
+
+Variables
+    maj: boolean
+Algo
+    maj = estMajeur(25)
+    SI maj == faux
+        afficher "Vous êtes mineur"
+    SINON
+        afficher "Vous êtes majeur"
+    FIN SI
+    
+    maj = estMajeur(15)
+    SI maj == faux
+        test = 50 * 15
+    FIN SI
+
+    maj = estMajeur(10)
+    SI majeur == vrai
+        afficher une image
+    FIN SI
+Fin algo
