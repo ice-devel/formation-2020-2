@@ -963,6 +963,7 @@ Variables
         email: chaine
         age: entier
     }
+
     personne1 : Personne
     personne2 : Personne
 Algo
@@ -993,20 +994,93 @@ Fin Algo
 
 Exercice:
 Ecrire l'algorithme qui :
-- Ajoute des produits dans un tableau
+- Ajouter des produits dans un tableau (
+Produit: structure {
+    nom:chaine
+    prix:entier
+})
 (l'ensemble des produits en vente chez TopAchat)
 avec un nom et un prix :
 Vélo 120 - Cadre 5 - Chaise 10 - Pull 20)
-- Afficher ces produits en les préfixant par un indice
+- Afficher ces produits en vente en les préfixant par un indice
 - Donner la main à l'utilisateur pour lui demander quel produit
-il veut acheter.
+il veut acheter : il choisit un produit grâce à son indice
 Tant qu'il n'a pas saisi -1, on lui redonne la main pour qu'il
-puisse choisir d'autres produits (gestion des paniers)
+puisse choisir d'autres produits (gestion du panier)
 - Quand il a fini, il faut lui afficher le prix total
 - Puis lui donner la main pour qu'il nous dise avec combien
 d'argent il va payer
 - Si il donne pas assez d'argent, on recommence l'étape d'avant
-- Si il donne d'argent ou trop, on lui dit merci et on lui rend
+- Si il donne pile poil l'argent demander ou plus, on lui dit merci et on lui rend
 si nécessaire la monnaie
 
 http://notepad.pw/m2i-CDA-janvier2020
+
+Produit: structure {
+   nom:chaine
+   prix:entier
+}
+
+Variable
+   prod: Produit
+   listeProduits: liste
+   i: entier
+   choix: entier
+   panier: liste
+   somme: entier
+   billet: entier
+   aRendre: entier
+Algo
+    // création du catalogue
+    prod.nom = "Vélo"
+    prod.prix = 120
+    ajouter prod dans listeProduits
+
+    prod.nom = "Cadre"
+    prod.prix = 5
+    ajouter prod dans listeProduits
+
+    prod.nom = "Chaise"
+    prod.prix = 10
+    ajouter prod dans listeProduits
+
+    prod.nom = "Pull"
+    prod.prix = 20
+    ajouter prod dans listeProduits
+
+    // affichage des produits à l'utilisateur
+    POUR i de 0 à count(listeProduits)-1
+        afficher (i+1) "-" listeProduits[i].nom "-" listeProduits[i].prix
+    FIN POUR
+
+    // donner la main à l'utilisateur pour qu'il choisissent ses produits
+    lire choix
+    TANT QUE choix != -1
+        ajouter listeProduits[choix-1] dans panier
+        Lire choix
+    FIN TANT QUE
+
+    // afficher le prix total
+    somme = 0
+    POUR i de 0 à Count(panier)-1
+        somme = somme + panier[i].prix
+    FIN POUR
+
+    afficher somme "€"
+
+    // demander avec combien d'argent il paie
+    Lire billet
+    TANT QUE billet < somme
+        afficher "c pa aC"
+        Lire billet
+    FIN TANT QUE
+
+    // si trop d'argent rendre la monnaie
+    SI billlet > somme
+        aRendre = billet - somme
+        afficher "Voici votre monnaie " aRendre
+    FIN SI
+
+    // salut
+    afficher "Merci orvoir"
+Fin algo
