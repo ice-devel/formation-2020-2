@@ -1032,18 +1032,15 @@ Variable
    aRendre: entier
 Algo
     // création du catalogue
-    prod.nom = "Vélo"
-    prod.prix = 120
-    ajouter prod dans listeProduits
 
-    prod.nom = "Cadre"
-    prod.prix = 5
-    ajouter prod dans listeProduits
+    // v2 : en passant par une fonction (écrite en dessous de l'algo)
+    ajouter creerProduit("Vélo", 120) dans listeProduits
 
-    prod.nom = "Chaise"
-    prod.prix = 10
-    ajouter prod dans listeProduits
+    ajouter creerProduit("Cadre", 5) dans listeProduits
 
+    ajouter creerProduit("Chaise", 10) dans listeProduits
+
+    // v1 : en créant le produit dans l'algo :
     prod.nom = "Pull"
     prod.prix = 20
     ajouter prod dans listeProduits
@@ -1084,3 +1081,11 @@ Algo
     // salut
     afficher "Merci orvoir"
 Fin algo
+
+Variable
+    prod: Produit
+Fonction creerProduit(nom:chaine, prix:entier)
+    prod.nom = nom
+    prod.prix = prix
+    retourner prod
+Fin fonction
