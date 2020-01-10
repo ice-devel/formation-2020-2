@@ -537,7 +537,7 @@ Afficher la note la plus basse
 Exo 10:
 Afficher la note la plus haute
 
-V - Les fonctions
+V- Les fonctions
 
 Une fonction est une série d'instruction à laquelle on va donner un nom,
 pour pouvoir utiliser cette suite d'instructions à plusieurs reprises
@@ -728,15 +728,16 @@ Fin algo
 bonjour
 b == r
 o == u
-
+correspond donc à tester ces indices entre eux :
 0 == 6
 1 == 5
 2 == 4
-3 == 3
-4 == 2
+3 == 3  // comparer une lettre avec elle-même est inutile
+4 == 2  // comparer la suite est inutile car déjà fait dans l'autre sens
 5 == 1
 6 == 0
 
+test
 0 == 3
 1 == 2
 2 == 1
@@ -753,13 +754,257 @@ et qui retourne la difference
 
 Exos 2- Créer une fonction qui dit si oui ou non
 une chaine passée en paramètre possède bien 5 caractères
+AVEC UNE BOUCLE
 
 Exos 3- Créer une fonction qui prend en paramètre un tableau
 et qui retourne un nouveau tableau dont les éléments
 sont inversés
+
+Exos 3bis- Créer une fonction qui affiche
+tous les éléments d'un tableau
+tableau[0]
+tableau[1]
+tableau[2]
 
 Exos 4- Créer une fonction qui prend en paramètre un tableau
 d'entier et retourne la valeur la plus petite
 
 Exos 5- Idem mais retourne la plus grande
 
+tableau:liste
+ajouter 1 dans tableau
+ajouter 99 dans tableau
+ajouter 98 dans tableau
+tableau2 = coucou(tableau)
+
+Exos corrections:
+Exo 1-
+
+// Création de la fonction
+Variables
+    difference: entier
+Fonction soustraction(nb1:entier, nb2:entier)
+    difference = nb1 - nb2
+    retourner difference
+Fin fonction
+
+// Algo principal : utilisation de la fonction
+Variables
+    nombre1: entier
+    nombre2: entier
+    resultat: entier
+Algo
+    nombre1 = 45
+    nombre2 = 100
+    resultat = soustraction(nombre1, nombre2)
+    afficher resultat
+
+    Lire nombre1
+    Lire nombre2
+    resultat = soustraction(nombre1, nombre2)
+Fin algo
+
+Exo 2-
+Variables
+    nbLettres: entier
+    i: entier
+    yesOrNo: booléen
+Fonction hasFiveChars(motATester:chaine)
+    nbLettres = 0
+    POUR i de 0 à COUNT(motATester) - 1
+        nbLettres = nbLettres + 1
+    FIN POUR
+
+    // ou en mieux : (lol)
+    // V1
+    nbLettres = COUNT(motATester)
+
+    SI nbLettres == 5
+        yesOrNo = vrai
+    SINON
+        yesOrNo = faux
+    FIN SI
+
+    retourner yesOrNo
+
+    // V2
+    SI COUNT(motATester) == 5
+        yesOrNo = vrai
+    SINON
+        yesOrNo = faux
+    FIN SI
+    retourner yesOrNo
+
+    // V3
+    SI COUNT(motATester) == 5
+        retourner vrai
+    SINON
+        retourner faux
+    FIN SI
+
+    // V4
+    yesOrNo = COUNT(motATester) == 5
+    retourner yesOrNo
+
+    // V5
+    retourner COUNT(motATester) == 5
+Fin fonction
+
+Variables
+    mot: chaine
+Algo
+    Lire mot
+    SI hasFiveChars(mot) == vrai
+        afficher mot " contient bien 5 caractères"
+    FIN SI
+Fin Algo
+
+Exo3bis
+Variables
+    i: entier
+Fonction displayArray(tab:liste)
+    POUR i de 0 à COUNT(tab)-1
+        afficher tab[i]
+    FIN POUR
+FIN Fonction
+
+Variables
+    listePrenoms: liste
+Algo
+    ajouter "toto" dans listePrenoms
+    ajouter "jacques" dans listePrenoms
+
+    displayArray(listePrenoms)
+Fin algo
+
+Exo3-
+
+Variables
+    newTab: liste
+    indexMax: entier
+Fonction reverse(tab:liste)
+    // pour un tableau à trois éléments, ceci fonctionne
+    // mais uniquement dans ce cas
+    newTab[0] = tab[2]
+    newTab[1] = tab[1]
+    newTab[2] = tab[0]
+
+    // pour toutes les longueurs de tableau sans exceptions :
+    indexMax = count(tab)-1
+    POUR i de 0 à indexMax
+        newTab[i] = tab[indexMax-i]
+    FIN POUR
+
+    retourner newTab
+Fin fonction
+
+Variables
+    listePrenoms: liste
+    listePrenomsInverse: liste
+Algo
+    ajouter "toto" dans listePrenoms
+    ajouter "jacques" dans listePrenoms
+
+    listePrenomsInverse = reverse(listePrenoms)
+Fin algo
+
+Exo4-
+Variables
+    minimum: entier
+Fonction min(tab:liste)
+    minimum = tab[0]
+    POUR i de 1 à COUNT(tab) - 1
+        SI tab[i] < minimum
+            minimum = tab[i]
+        FIN SI
+    FIN POUR
+    retourner minimum
+Fin fonction
+
+Exo5-
+Variables
+    maximum: entier
+Fonction max(tab:liste)
+    maximum = tab[0]
+    POUR i de 1 à COUNT(tab) - 1
+        SI tab[i] > maximum
+            maximum = tab[i]
+        FIN SI
+    FIN POUR
+    retourner maximum
+Fin fonction
+
+Variables
+    listeNotes: liste
+    note: entier
+    noteMini: entier
+    noteMaxi: entier
+Algo
+    Lire note
+    ajouter note dans listeNotes
+    Lire note
+    ajouter note dans listeNotes
+
+    noteMini = min(listeNotes)
+    noteMaxi = max(listeNotes)
+Fin algo
+
+VI- Les structures
+Variables
+    nom: chaine
+    email: chaine
+    age: entier
+    nom2: chaine
+    email2: chaine
+    age2: entier
+
+    Personne: structure {
+        nom: chaine
+        email: chaine
+        age: entier
+    }
+    personne1 : Personne
+    personne2 : Personne
+Algo
+    nom = "toto"
+    email = "toto@gmail.com"
+    age = 25
+
+    personne1.nom = "toto"
+    personne1.email = "toto@gmail.com"
+    personne1.age = 25
+
+    afficher personne1.age
+Fin
+
+VII - "Connexion" à une base de données
+
+Variables
+    users: liste
+Algo
+    connexion au serveur de bdd (localhost, "root", "1234")
+    choix de la base ("formation")
+    users = requete sql ("SELECT id, name, points FROM user")
+
+    POUR i de 0 à count(users)-1
+        afficher users[i].id " - " users[i].name " - " users[i].points
+    FIN POUR
+Fin Algo
+
+Exercice:
+Ecrire l'algorithme qui :
+- Ajoute des produits dans un tableau
+(l'ensemble des produits en vente chez TopAchat)
+avec un nom et un prix :
+Vélo 120 - Cadre 5 - Chaise 10 - Pull 20)
+- Afficher ces produits en les préfixant par un indice
+- Donner la main à l'utilisateur pour lui demander quel produit
+il veut acheter.
+Tant qu'il n'a pas saisi -1, on lui redonne la main pour qu'il
+puisse choisir d'autres produits (gestion des paniers)
+- Quand il a fini, il faut lui afficher le prix total
+- Puis lui donner la main pour qu'il nous dise avec combien
+d'argent il va payer
+- Si il donne pas assez d'argent, on recommence l'étape d'avant
+- Si il donne d'argent ou trop, on lui dit merci et on lui rend
+si nécessaire la monnaie
