@@ -1008,3 +1008,5 @@ d'argent il va payer
 - Si il donne pas assez d'argent, on recommence l'étape d'avant
 - Si il donne d'argent ou trop, on lui dit merci et on lui rend
 si nécessaire la monnaie
+
+http://notepad.pw/m2i-CDA-janvier2020
